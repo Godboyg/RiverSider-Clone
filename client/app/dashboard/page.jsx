@@ -97,7 +97,7 @@ function page() {
          </div>
          </div>
           </Link>
-          <p className='text-white text-[4.3vw] sm:text-[3vw] md:text-[3vw] lg:text-[2vw] xl:text-[1.1vw] font-bold'>Record</p>
+          <p className='text-white text-[4.3vw] sm:text-[3vw] md:text-[3vw] lg:text-[1.8vw] xl:text-[1vw] font-bold'>Record</p>
            </div>
            <div className="flex-col gap-1 items-center justify-center inline-flex group">
             <div className="group relative inline-flex">
@@ -124,7 +124,7 @@ function page() {
         </div>
                </div>
             </div>
-            <p className='text-white text-[4.4vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[2vw] xl:text-[1.1vw] font-bold'>Join</p> 
+            <p className='text-white text-[4.4vw] sm:text-[3.2vw] md:text-[3vw] lg:text-[1.8vw] xl:text-[1vw] font-bold'>Join</p> 
            </div>
         </div>
        </div>
