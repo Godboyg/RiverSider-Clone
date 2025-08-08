@@ -8,13 +8,13 @@ const server = http.createServer(app);
 const { connectSocket } = require("./middlewares/socket");
 const io = new Server(server , {
   cors: {
-    origin: 'https://riverside-clone.netlify.app/',
+    origin: 'https://riverside-clone.netlify.app',
     methods: ['GET', 'POST'],
     credentials: true
   }});
 
 app.use(cors({
-    origin: 'https://riverside-clone.netlify.app/',
+    origin: 'https://riverside-clone.netlify.app',
     credentials: true
 }));
 
