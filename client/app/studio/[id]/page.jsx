@@ -15,7 +15,7 @@ import { useSelector , useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { addUsers, userAdded , clearRoom } from '@/app/Redux/Slice';
 
-const socket = io('http://localhost:4000');
+const socket = io('https://riversider-clone.onrender.com/');
 
 function page() {
     const [ visible , setVisible ] = useState(true);
