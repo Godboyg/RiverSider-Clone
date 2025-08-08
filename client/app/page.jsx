@@ -10,12 +10,12 @@ import axios from "axios";
 
 async function page() {
 
-  axios.get("http://localhost:4000/").then(() => {
-    console.log("server running!");
+  axios.get("https://riversider-clone.onrender.com/").then(() => {
+    console.log("server 1 running!");
   })
 
-  axios.get("http://localhost:8000/").then(() => {
-    console.log("server running!");
+  axios.get("https://riversider-clone-service.onrender.com/").then(() => {
+    console.log("server 2 running!");
   })
 
   const session = await auth0.getSession();
