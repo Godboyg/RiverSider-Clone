@@ -13,7 +13,7 @@ const cors = require("cors");
 
 app.use(
     cors({
-     origin: "https://riverside-clone.netlify.app/",
+     origin: "https://riverside-clone.netlify.app",
      credentials: true
     })
 );
