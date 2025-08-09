@@ -52,7 +52,7 @@ function page() {
     ${boolValue ? "xl:w-[81vw] lg:w-[78vw] 2xl:w-[81vw] md:w-full xl:left-65 2xl:left-74 lg:left-57 md:left-75" : "xl:w-[93vw] 2xl:w-[93vw] lg:w-[92vw]"}`}>
       <div className="w-full h-full">
         <div className="h-16 w-full border-b-gray-900 border-b-1"></div>
-      <div className="flex items-center justify-between px-5 py-3">
+      <div className="flex items-center justify-between p-5">
         <h2 className='text-xl font-bold'>Projects</h2>
         <div className="flex items-center justify-center gap-2">
           <div className={`transition ease-in duration-100 flex hover:cursor-pointer items-center
