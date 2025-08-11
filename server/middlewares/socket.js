@@ -14,6 +14,10 @@ async function connectSocket(io) {
               socket.broadcast.to(roomId).emit("user-stop-typing");
             })
 
+            socket.on("audio",({ audio , roomId }) => {
+              socket.broadcast.to(roomId).emit("user-audio", { audio });
+            })
+
             socket.on("send-show-ty",({ typ , roomId}) => {
               socket.broadcast.to(roomId).emit("show-ty", typ);
             })

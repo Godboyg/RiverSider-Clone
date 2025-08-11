@@ -174,6 +174,10 @@ function page() {
 
      socket.emit("check-room-size",param.id);
 
+     socket.on("user-audio", ({ audio }) => {
+      setBorder(audio);
+     })
+
      socket.on("know-room-size", (size) => {
       setUser(size);
       console.log("room size",size);
@@ -367,6 +371,7 @@ function page() {
     const audioTrack = med?.getAudioTracks()[0];
     if (audioTrack) {
       audioTrack.enabled = !audioTrack.enabled;
+      socket.emit("audio",{ audio : audioTrack.enabled , roomId : param.id});
       setMicOn(audioTrack.enabled);
       setBorder(!audioTrack.enabled);
     }
