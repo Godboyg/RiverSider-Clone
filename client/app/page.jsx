@@ -10,11 +10,11 @@ import axios from "axios";
 
 async function page() {
 
-  axios.get("http://localhost:4000/").then(() => {
+  axios.get("https://riversider-clone.onrender.com/").then(() => {
     console.log("server running!");
   })
 
-  axios.get("http://localhost:8000/").then(() => {
+  axios.get("https://riversider-clone-service.onrender.com/").then(() => {
     console.log("server running!");
   })
 
