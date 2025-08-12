@@ -612,7 +612,7 @@ function page() {
           }
            </div>
            </div>
-           <div className="text-[3.6vw] sm:text-[2.1vw] md:text-[1.7vw] lg:text-[1.2vw] xl:text-[1vw] text-cyan-500">
+           <div className="text-[3.6vw] sm:text-[2.1vw] md:text-[1.7vw] lg:text-[1.2vw] xl:text-[1vw] text-cyan-500 ml-5">
             RoomId : {param.id}
            </div>
          </div>
