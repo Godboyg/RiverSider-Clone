@@ -576,8 +576,9 @@ function page() {
                 <button className='hover:cursor-pointer text-red-600' onClick={handleRequestRejected}>No</button>
               </div>
              </div>
-         <div className="h-[12vh] w-full flex gap-3 items-center justify-between px-3">
-         <div className="flex items-center justify-center gap-2">
+         <div className="h-[12vh] w-full flex flex-col gap-3 items-center justify-between px-3">
+           <div className="">
+              <div className="flex items-center justify-center gap-2">
            <div className="text-xl hover:cursor-pointer" 
           onClick={handleBack}>
             <MdKeyboardArrowLeft />
@@ -593,7 +594,7 @@ function page() {
             className='h-6 text-[3vw] sm:text-[2.2vw] md:text-[2vw] lg:text-[1.3vw] xl:text-[1vw] font-bold border-none outline-none text-white' placeholder='Untitled Recording' /></span>
             </div>
           </div>
-         </div>
+           </div>
            <div className="md:hidden relative rounded-xl transition-all flex items-center justify-center h-19 w-18 duration-150 ease-in-out hover:bg-[#1D1D1D] p-2 hover:cursor-pointer"
           onClick={e => setMsgView(true)}>
           <div className="flex flex-col gap-[3px] items-center justify-center">
@@ -609,6 +610,10 @@ function page() {
               </div>
             )
           }
+           </div>
+           </div>
+           <div className="text-[3.7vw] sm:text-[2.2vw] md:text-[1.9vw] lg:text-[1.4vw] xl:text-[1.2vw] text-green-500">
+            RoomId : {param.id}
            </div>
          </div>
          <div className={`h-[90vh] sm:h-[84vh] md:h-[83vh] lg:h-[80vh] xl:h-[75vh] w-full flex flex-wrap justify-center gap-4 p-3 ${ user <=2 ? "items-center justify-center" : ""}`}>
@@ -629,7 +634,8 @@ function page() {
             }
            {
             Object.entries(peers).map(([id,{ stream , na }]) => (
-              <div className={`rounded-md overflow-hidden relative ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
+              <div className={`rounded-md overflow-hidden relative
+              ${border ? "border-2 border-purple-700 shadow shadow-indigo-50" : ""} ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
                 <video key={id} autoPlay playsInline ref={video => video && (video.srcObject = stream)} 
                 className={`rounded-xl h-full w-full object-cover`} />
                 <div className={`absolute bottom-5 font-bold left-5 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
