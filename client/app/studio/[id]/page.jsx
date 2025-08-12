@@ -576,8 +576,8 @@ function page() {
                 <button className='hover:cursor-pointer text-red-600' onClick={handleRequestRejected}>No</button>
               </div>
              </div>
-         <div className="h-[12vh] w-full flex flex-col gap-3 items-center justify-between px-3">
-           <div className="">
+         <div className="h-[12vh] w-full flex flex-col">
+           <div className="h-full w-full flex gap-3 items-center justify-between px-3">
               <div className="flex items-center justify-center gap-2">
            <div className="text-xl hover:cursor-pointer" 
           onClick={handleBack}>
@@ -612,7 +612,7 @@ function page() {
           }
            </div>
            </div>
-           <div className="text-[3.7vw] sm:text-[2.2vw] md:text-[1.9vw] lg:text-[1.4vw] xl:text-[1.2vw] text-green-500">
+           <div className="text-[3.6vw] sm:text-[2.1vw] md:text-[1.7vw] lg:text-[1.2vw] xl:text-[1vw] text-cyan-500">
             RoomId : {param.id}
            </div>
          </div>
