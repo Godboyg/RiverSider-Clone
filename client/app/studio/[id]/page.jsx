@@ -171,7 +171,6 @@ function page() {
       }))
       setJoinerId(user);
       setReq(true);
-      setRemoteStream(true);
      })
 
      socket.emit("check-room-size",param.id);
@@ -359,6 +358,7 @@ function page() {
         },
        }));
       };
+      setRemoteStream(true);
 
       if (initiator) {
        pc.onnegotiationneeded = async () => {
