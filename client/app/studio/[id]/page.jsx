@@ -45,6 +45,7 @@ function page() {
     const [admin , setAdmin] = useState(false);
     const [adminId , setAdminId] = useState("");
     const [typ , setTyp] = useState(false);
+    const [remoteStream , setRemoteStream] = useState(false);
     
     const localVideoRef = useRef(null);
     const [peers, setPeers] = useState({});
@@ -233,6 +234,7 @@ function page() {
         socket.emit('signal', { target: caller, signal: pc.localDescription });
       } else if (signal.type === 'answer') {
         await pc.setRemoteDescription(new RTCSessionDescription(signal));
+        setRemoteStream(true);
       } else if (signal.candidate) {
         await pc.addIceCandidate(new RTCIceCandidate(signal));
       }
@@ -633,10 +635,10 @@ function page() {
               )
             }
            {
-            peers && (
+            peers && remoteStream (
                Object.entries(peers).map(([id,{ stream , na }]) => (
                  <div className={`rounded-md overflow-hidden relative
-                   ${border ? "border-2 border-purple-700 shadow shadow-indigo-50" : ""} ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
+                  ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
                   <video key={id} autoPlay playsInline ref={video => video && (video.srcObject = stream)} 
                   className={`rounded-xl h-full w-full object-cover`} />
                 <div className={`absolute bottom-5 font-bold left-5 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
