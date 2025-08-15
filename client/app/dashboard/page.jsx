@@ -109,7 +109,7 @@ function page() {
                </div>
               </div>
                <div
-       class={`absolute left-full top-0 ml-4 w-40 h-32 bg-black text-white rounded-lg shadow-lg 
+       className={`absolute left-full top-0 ml-4 w-40 h-32 bg-black text-white rounded-lg shadow-lg 
           items-center justify-center transition-opacity duration-300 
                 ${
             isMobile
