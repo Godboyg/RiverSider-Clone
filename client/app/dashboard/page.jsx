@@ -35,6 +35,7 @@ function page() {
 
   const handleCl = () => {
     if(isMobile) setShowBox((prev) => !prev);
+    console.log("clicked!!");
   }
 
   useEffect(() => {
