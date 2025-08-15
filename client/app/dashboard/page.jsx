@@ -116,7 +116,7 @@ function page() {
               ? showBox
                 ? "flex"
                 : "hidden"
-              : "lg:group-hover:flex"
+              : "hidden lg:group-hover:block"
           }`}>
         <div className="h-42 w-42 py-4 flex flex-col items-center justify-center gap-2 rounded-md bg-black text-white">
           <h2 className='font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-black/50'>Enter Meet</h2>
