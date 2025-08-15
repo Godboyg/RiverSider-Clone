@@ -81,7 +81,7 @@ function page() {
 
   return (
     <>
-    <div className={`absolute xl:top-15 xl:left-22 2xl:left-25 lg:top-15 lg:left-20 md:top-17 md:left-0 md:w-full md:h-[89vh] sm:top-17 sm:left-0 sm:w-full sm:h-[89vh] h-[89vh] w-full top-17 left-0 border-gray-900 border-1 rounded-2xl xl:h-[89dvh] lg:h-[91vh] 2xl:h-[92vh] bg-[#111111] text-white flex flex-col items-center gap-5 
+    <div className={`absolute z-99 xl:top-15 xl:left-22 2xl:left-25 lg:top-15 lg:left-20 md:top-17 md:left-0 md:w-full md:h-[89vh] sm:top-17 sm:left-0 sm:w-full sm:h-[89vh] h-[89vh] w-full top-17 left-0 border-gray-900 border-1 rounded-2xl xl:h-[89dvh] lg:h-[91vh] 2xl:h-[92vh] bg-[#111111] text-white flex flex-col items-center gap-5 
     ${boolValue ? "xl:w-[81vw] lg:w-[78vw] 2xl:w-[81vw] md:w-full xl:left-65 2xl:left-74 lg:left-57 md:left-75" : "xl:w-[93vw] 2xl:w-[93vw] lg:w-[92vw]"}`}>
       <div className="w-full h-full">
         <div className="h-16 w-full border-b-gray-900 border-b-1"></div>
