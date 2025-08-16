@@ -82,7 +82,7 @@ function page() {
 
   return (
     <>
-    <div className={`absolute z-99 xl:top-15 xl:left-22 2xl:left-25 lg:top-15 lg:left-20 md:top-17 md:left-0 md:w-full md:h-[89vh] sm:top-17 sm:left-0 sm:w-full sm:h-[89vh] h-[89vh] w-full top-17 left-0 border-gray-900 border-1 rounded-2xl xl:h-[89dvh] lg:h-[91vh] 2xl:h-[92vh] bg-[#111111] text-white flex flex-col items-center gap-5 
+    <div className={`absolute xl:top-15 xl:left-22 2xl:left-25 lg:top-15 lg:left-20 md:top-17 md:left-0 md:w-full md:h-[89vh] sm:top-17 sm:left-0 sm:w-full sm:h-[89vh] h-[89vh] w-full top-17 left-0 border-gray-900 border-1 rounded-2xl xl:h-[89dvh] lg:h-[91vh] 2xl:h-[92vh] bg-[#111111] text-white flex flex-col items-center gap-5 
     ${boolValue ? "xl:w-[81vw] lg:w-[78vw] 2xl:w-[81vw] md:w-full xl:left-65 2xl:left-74 lg:left-57 md:left-75" : "xl:w-[93vw] 2xl:w-[93vw] lg:w-[92vw]"}`}>
       <div className="w-full h-full">
         <div className="h-16 w-full border-b-gray-900 border-b-1"></div>
@@ -102,7 +102,7 @@ function page() {
            </div>
            <div className="flex-col gap-1 items-center justify-center inline-flex group">
             <div className="group relative inline-flex">
-              <div className="h-16 w-16 transition-all z-999 duration-250 ease-in-out flex hover:bg-green-700 hover:cursor-pointer items-center justify-center rounded-full bg-black"
+              <div className="h-16 w-16 transition-all duration-250 ease-in-out flex hover:bg-green-700 hover:cursor-pointer items-center justify-center rounded-full bg-black"
               onClick={handleCl}>
                <div className="rounded-full h-5.5 flex items-center justify-center w-5.5 border-2 border-green-700">
                 <div className="bg-green-500 w-2.5 h-2.5 rounded-full"></div>
