@@ -61,7 +61,7 @@ function page() {
     const param = useParams();
     console.log("params",param.id);
 
-    // const peerConnections = new Map();
+    const peerConnections = new Map();
     // const currentUser = useSelector((state) => state.state.user);
     // console.log("current user",currentUser);
 
