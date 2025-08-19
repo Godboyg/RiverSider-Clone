@@ -62,14 +62,14 @@ function page() {
     console.log("params",param.id);
 
     // const peerConnections = new Map();
-    const currentUser = useSelector((state) => state.state.user);
-    console.log("current user",currentUser);
+    // const currentUser = useSelector((state) => state.state.user);
+    // console.log("current user",currentUser);
 
-    useEffect(() => {
-      if(!currentUser){
-        router.push("/");
-      }
-    },[])
+    // useEffect(() => {
+    //   if(!currentUser){
+    //     router.push("/");
+    //   }
+    // },[])
     
     useEffect(()=>{
         setroomId(param.id);
