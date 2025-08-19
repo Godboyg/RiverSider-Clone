@@ -61,7 +61,7 @@ function page() {
     const param = useParams();
     console.log("params",param.id);
 
-    const peerConnections = new Map();
+    //const peerConnections = new Map();
     // const currentUser = useSelector((state) => state.state.user);
     // console.log("current user",currentUser);
 
@@ -485,7 +485,7 @@ function page() {
           <div className="flex items-center gap-2">
             <span className='xl:text-[1.5vw] md:text-[2.3vw] sm:text-[2.6vw] text-[4.4vw] font-bold'>Podforge</span>
             <span className=''>|</span>
-            <span className='rounded-md hover:bg-[#2a2a2a] font-bold'>{currentUser}'s Studio</span>
+{/*             <span className='rounded-md hover:bg-[#2a2a2a] font-bold'>{currentUser}'s Studio</span> */}
           </div>
          </div>
         <div className="h-[65vh] md:h-[60dvh] w-full sm:w-[80vw] md:w-[70vw] lg:w-[60vw] z-100 py-2 rounded-xl flex flex-col items-center justify-center md:flex-row px-4">
