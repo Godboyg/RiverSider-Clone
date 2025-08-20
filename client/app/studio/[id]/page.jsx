@@ -239,6 +239,9 @@ function page() {
       } else if (signal.type === 'answer') {
         await pc.setRemoteDescription(new RTCSessionDescription(signal));
         setRemoteStream(true);
+        setTimeout(() => {
+            setRemoteStream(false);
+        },300)
       } else if (signal.candidate) {
         await pc.addIceCandidate(new RTCIceCandidate(signal));
       }
@@ -562,7 +565,7 @@ function page() {
                ref={localStreamRef} 
                autoPlay 
                playsInline 
-               className='rounded-xl h-full w-full'
+               className='rounded-md h-full w-full'
             /> 
             <div className="absolute w-full flex items-center justify-center">
                 <button onClick={toggleMic} className="px-4 py-2 text-[3.9vw] sm:text-[3vw] md:text-[3vw] lg:text-[2vw] rounded text-white">
@@ -631,7 +634,7 @@ function page() {
          <div className={`h-[90vh] sm:h-[84vh] md:h-[83vh] lg:h-[80vh] xl:h-[75vh] w-full flex flex-wrap justify-center gap-1 sm:gap-2 p-3 ${ user <=2 ? "items-center justify-center" : ""}`}>
           {
               localVideoRef ? (
-               <div className={`relative ${ user === 1 ? "h-full w-full flex justify-center items-center" : ""} ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[40vh] xl:h-[35vh] w-[44vw] sm:w-[30vw] md:w-[25vw] xl:w-[22vw]"}`}>
+               <div className={`relative ${ user === 1 ? "h-full w-full flex justify-center items-center" : ""} ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[40vh] xl:h-[35vh] w-[45vw] sm:w-[30vw] md:w-[25vw] xl:w-[22vw]"}`}>
                   <video 
                 ref={localVideoRef} 
                 autoPlay 
@@ -648,7 +651,7 @@ function page() {
             peers && remoteStream && (
                Object.entries(peers).map(([id,{ stream , na }]) => (
                  <div className={`rounded-md overflow-hidden relative
-                  ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[44vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
+                  ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[45vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
                   <video key={id} autoPlay playsInline ref={video => video && (video.srcObject = stream)} 
                   className={`rounded-md h-full w-full object-cover ${partnerVoice ? "" : "border-2 border-green-600"}`} />
                 <div className={`absolute bottom-1 font-bold left-1 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
