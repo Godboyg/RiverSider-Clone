@@ -179,7 +179,6 @@ function page() {
      socket.on("user-audio", ({ audio }) => {
       if(audio){
           setPartnerVoice(audio);
-          alert("partner voice comming");
       }
       setPartnerVoice(!audio);
      })
@@ -646,7 +645,7 @@ function page() {
                  <div className={`rounded-md overflow-hidden relative
                   ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
                   <video key={id} autoPlay playsInline ref={video => video && (video.srcObject = stream)} 
-                  className={`rounded-md h-full w-full object-cover ${partnerVoice ? "border-2 border-green-600" : ""}`} />
+                  className={`rounded-md h-full w-full object-cover ${partnerVoice ? "" : "border-2 border-green-600"}`} />
                 <div className={`absolute bottom-1 font-bold left-1 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
               </div>
              )
