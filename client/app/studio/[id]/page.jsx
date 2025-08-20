@@ -178,9 +178,10 @@ function page() {
 
      socket.on("user-audio", ({ audio }) => {
       if(audio){
-          setPartnerVoice(true);
+          setPartnerVoice(audio);
+          alert("partner voice comming");
       }
-      setPartnerVoice(false);
+      setPartnerVoice(!audio);
      })
 
      socket.on("know-room-size", (size) => {
@@ -633,7 +634,7 @@ function page() {
                 playsInline 
                 className={`rounded-md h-full w-full object-cover ${border ? "border-2 border-purple-700 shadow shadow-indigo-50" : ""}`}
                />
-               <p className='absolute text-white font-bold text-xl bottom-5 left-5'>{name}</p>
+               <p className='absolute text-white font-bold text-xl bottom-1 left-1'>{name}</p>
                </div>
               ) : (
                <div className='h-full w-full flex items-center justify-center text-white font-bold'>Player 1</div>
@@ -645,8 +646,8 @@ function page() {
                  <div className={`rounded-md overflow-hidden relative
                   ${ user <= 2 ? "h-[35vh] sm:h-[52vh] md:h-[60vh] lg:h-[70vh] xl:h-[64vh] xl:w-[40vw] lg:w-[35vw] sm:w-[45vw] md:w-[35vw] w-full" : "h-[35vh] sm:h-[35vh] md:h-[38vh] xl:h-[35vh] w-[40vw] sm:w-[30vw] md:w-[24vw] xl:w-[22vw]"}`}>
                   <video key={id} autoPlay playsInline ref={video => video && (video.srcObject = stream)} 
-                  className={`rounded-xl h-full w-full object-cover ${partnerVoice ? "border-green-600 border-2" : ""}`} />
-                <div className={`absolute bottom-5 font-bold left-5 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
+                  className={`rounded-md h-full w-full object-cover ${partnerVoice ? "border-2 border-green-600" : ""}`} />
+                <div className={`absolute bottom-1 font-bold left-1 text-white ${ stream ? "block" : "hidden"}`}>{na}</div>
               </div>
              )
             )
