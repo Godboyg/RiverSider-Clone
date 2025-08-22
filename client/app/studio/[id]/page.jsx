@@ -239,9 +239,6 @@ function page() {
       } else if (signal.type === 'answer') {
         await pc.setRemoteDescription(new RTCSessionDescription(signal));
         setRemoteStream(true);
-        setTimeout(() => {
-            setRemoteStream(false);
-        },300)
       } else if (signal.candidate) {
         await pc.addIceCandidate(new RTCIceCandidate(signal));
       }
