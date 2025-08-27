@@ -347,11 +347,11 @@ function page() {
         pc.addTrack(track, stream);
       });
 
-      const audio = stream?.getAudioTracks()[0];
+      // const audio = stream?.getAudioTracks()[0];
 
-      if(audio){
-       socket.emit("audio",{ audio : audio.enabled , roomId : param.id});   
-      }
+      // if(audio){
+      //  socket.emit("audio",{ audio : audio.enabled , roomId : param.id});   
+      // }
 
       pc.onicecandidate = e => {
        if (e.candidate) {
