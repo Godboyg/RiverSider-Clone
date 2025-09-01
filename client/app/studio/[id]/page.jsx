@@ -385,7 +385,7 @@ function page() {
     if (audioTrack) {
       audioTrack.enabled = !audioTrack.enabled;
       setMicOn(audioTrack.enabled);
-      setBorder(!audioTrack.enabled);
+      // setBorder(!audioTrack.enabled);
     }
   };
 
